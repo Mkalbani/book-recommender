@@ -3,5 +3,6 @@ streamlit
 numpy
 scikit-learn
 gunicorn==19.7.1
+pandas<2.0.0
 ### local packages -
 -e . 
