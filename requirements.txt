@@ -2,6 +2,6 @@
 streamlit
 numpy
 scikit-learn
-
+gunicorn==19.7.1
 ### local packages -
 -e . 
