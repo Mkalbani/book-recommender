@@ -7,7 +7,8 @@ import pickle
 import streamlit as st
 import numpy as np
 import os  # Import os to check file existence
-
+import pandas as pd
+pd.__version__ = "1.2.5"
 st.header('Book Recommender System Using Machine Learning')
 
 # Checking if the pickle files exist before attempting to open them
