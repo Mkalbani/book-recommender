@@ -9,10 +9,10 @@ import numpy as np
 
 
 st.header('Book Recommender System Using Machine Learning')
-model = pd.read_pickle('artifacts/model.pkl','rb'))
-book_names = pd.read_pickle('artifacts/book_names.pkl','rb'))
-final_rating = pd.read_pickle('artifacts/final_rating.pkl','rb'))
-book_pivot = pd.read_pickle('artifacts/book_pivot.pkl','rb'))
+model = pd.read_pickle('artifacts/model.pkl','rb')
+book_names = pd.read_pickle('artifacts/book_names.pkl','rb')
+final_rating = pd.read_pickle('artifacts/final_rating.pkl','rb')
+book_pivot = pd.read_pickle('artifacts/book_pivot.pkl','rb')
 
 
 def fetch_poster(suggestion):
