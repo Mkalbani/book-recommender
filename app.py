@@ -4,7 +4,7 @@ Email: mkothman.jr@gmail.com
 '''
 
 import pickle
-import streamlit as stt
+import streamlit as st
 import numpy as np
 import os  # Import os to check file existence
 import pandas as pd
