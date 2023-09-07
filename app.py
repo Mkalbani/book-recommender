@@ -3,18 +3,28 @@ Author: Mkothm
 Email: mkothman.jr@gmail.com
 '''
 
-import pandas as pd
+import pickle
 import streamlit as st
 import numpy as np
-
+import os  # Import os to check file existence
 
 st.header('Book Recommender System Using Machine Learning')
-model = pd.compat.pickle_compat.load('artifacts/model.pkl','rb')
-book_names = pd.compat.pickle_compat.load('artifacts/book_names.pkl','rb')
-final_rating = pd.compat.pickle_compat.load('artifacts/final_rating.pkl','rb')
-book_pivot = pd.compat.pickle_compat.load('artifacts/book_pivot.pkl','rb')
 
+# Checking if the pickle files exist before attempting to open them
+model_path = 'artifacts/model.pkl'
+book_names_path = 'artifacts/book_names.pkl'
+final_rating_path = 'artifacts/final_rating.pkl'
+book_pivot_path = 'artifacts/book_pivot.pkl'
 
+if not (os.path.exists(model_path) and os.path.exists(book_names_path) and
+        os.path.exists(final_rating_path) and os.path.exists(book_pivot_path)):
+    st.error("One or more pickle files do not exist. Please make sure all required files are available.")
+else:
+    # If all files exist, proceed with loading them
+    model = pickle.load(open(model_path, 'rb'))
+    book_names = pickle.load(open(book_names_path, 'rb'))
+    final_rating = pickle.load(open(final_rating_path, 'rb'))
+    book_pivot = pickle.load(open(book_pivot_path, 'rb'))
 def fetch_poster(suggestion):
     book_name = []
     ids_index = []
