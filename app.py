@@ -3,16 +3,16 @@ Author: Mkothm
 Email: mkothman.jr@gmail.com
 '''
 
-import pickle
+import pandas as pd
 import streamlit as st
 import numpy as np
 
 
 st.header('Book Recommender System Using Machine Learning')
-model = pickle.load(open('artifacts/model.pkl','rb'))
-book_names = pickle.load(open('artifacts/book_names.pkl','rb'))
-final_rating = pickle.load(open('artifacts/final_rating.pkl','rb'))
-book_pivot = pickle.load(open('artifacts/book_pivot.pkl','rb'))
+model = pd.read_pickle('artifacts/model.pkl','rb'))
+book_names = pd.read_pickle('artifacts/book_names.pkl','rb'))
+final_rating = pd.read_pickle('artifacts/final_rating.pkl','rb'))
+book_pivot = pd.read_pickle('artifacts/book_pivot.pkl','rb'))
 
 
 def fetch_poster(suggestion):
