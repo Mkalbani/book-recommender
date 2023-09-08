@@ -3,6 +3,6 @@ streamlit
 numpy
 scikit-learn
 gunicorn==19.7.1
-pd.__version__ = "1.2.5"
+pd.__version__ == "1.2.5"
 ### local packages -
 -e . 
